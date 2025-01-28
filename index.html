@@ -33,6 +33,13 @@
         <div class="birthday-message text-center" style="font-size: 24px; margin-top: 20px; color: #F2B300;">
         Happy Birthday Anshika, this is the small thing which I have created for you.
         </div>
+	<script>
+        // JavaScript to hide the message after the first click
+        document.body.addEventListener('click', function() {
+            var message = document.getElementById('birthday-message');
+            message.style.display = 'none'; // Hides the message on first click
+        });
+        </script>
 	<div class="loading"></div>
 	<audio class="song" controls loop>
         <source src="music/happy_birthday.mp3"></source>
@@ -129,8 +136,6 @@
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
-					<div class="container">
-				        <p>Today is...</p>
 					<button class="btn btn-primary" id="turn_on">hey anshika lets celebrate - Turn On Lights</button>
 					<button class="btn btn-primary" id="play">lets Play Music</button>
 					<button class="btn btn-primary" id="bannar_coming">im not here but leys Decorate</button>
