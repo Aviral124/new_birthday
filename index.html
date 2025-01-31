@@ -44,17 +44,23 @@ C<!DOCTYPE html>
 <body>
 
 	<script>
-    // Array of light colors
-    const lightColors = ["#F6C4F1", "#D4F1F4", "#FFECB3", "#C8E6C9", "#FFF3E0", "#E1BEE7", "#FFCDD2"];
+   // Array of light colors
+const lightColors = ["#F6C4F1", "#D4F1F4", "#FFECB3", "#C8E6C9", "#FFF3E0", "#E1BEE7", "#FFCDD2"];
 
-    let index = 0;
+let index = 0;
 
-    setTimeout(() => {
-        setInterval(() => {
-            document.body.style.backgroundColor = lightColors[index]; // Apply color
-            index = (index + 1) % lightColors.length; // Loop through colors
-        }, 5000); // Change color every 5 seconds
-    }, 5000); // Initial 5-second delay before the cycle starts
+// Function to change the background color
+function changeColor() {
+    document.body.style.backgroundColor = lightColors[index]; // Apply color
+    index = (index + 1) % lightColors.length; // Loop through colors
+}
+
+// Initial 5-second delay before the cycle starts
+setTimeout(() => {
+    changeColor(); // Change the color once after 5 seconds
+    setInterval(changeColor, 5000); // Then, keep changing it every 5 seconds
+}, 5000);
+
 
 </script>
 	
