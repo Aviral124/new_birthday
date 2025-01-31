@@ -27,9 +27,37 @@ C<!DOCTYPE html>
 	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet/less" href="cake.less">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+
+
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change</title>
+    <style>
+        body {
+            background-color: #C6A6F6; /* Start with a light color */
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 1s ease-in-out; /* Smooth transition */
+        }
+    </style>
 </head>
 
 <body>
+
+	<script>
+    // Array of light colors
+    const lightColors = ["#F6C4F1", "#D4F1F4", "#FFECB3", "#C8E6C9", "#FFF3E0", "#E1BEE7", "#FFCDD2"];
+
+    let index = 0;
+
+    setTimeout(() => {
+        setInterval(() => {
+            document.body.style.backgroundColor = lightColors[index]; // Apply color
+            index = (index + 1) % lightColors.length; // Loop through colors
+        }, 5000); // Change color every 5 seconds
+    }, 5000); // Initial 5-second delay before the cycle starts
+
+</script>
+	
 	<div class="loading"></div>
 	<audio class="song" controls loop>
         <source src="music/happy_birthday.mp3"></source>
